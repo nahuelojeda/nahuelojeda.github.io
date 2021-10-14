@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="main-header">
+        
+        <input type="checkbox" id="menu">
+
+        <nav class="nav-bar">
+
+            <ul class="nav-bar__nav-list">
+
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="index.html">Inicio</a>
+                </li>
+
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="contacto.html">Contacto</a>
+                </li>
+
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <div class="search-bar">
+
+            <div class="search-bar__logo-container">
+                <p><a href="index.html"><bold>Connecticus Corporation</bold></a></p>
+            </div>
+
+            <form class="search-bar__form-container">
+                <label class="search-bar__form-label" for="busqueda">Buscar</label>
+                <input class="search-bar__form-search" id="busqueda" type="search">
+                <input class="search-bar__form-submit" type="submit" value="Buscar">
+            </form>
+
+            <div class="search-bar__logo-container">
+                <img src="IMG/carrito-de-compras.png" alt="carrito">
+                
+            </div>
+            
+            <div class="menu-toggle">
+                
+                <label class="menu-toggle__label" for="menu">
+                    <span class="menu-toggle__pan-arriba"></span>
+                    <span class="menu-toggle__medallon"></span>
+                    <span class="menu-toggle__pan-abajo"></span>
+                </label>
+                
+            </div>
+
+        </div>
+        
+    </header>
+    <main class="termo">
+        <form action="alta.php" method="post" enctype="multipart/form-data">
+            <div class="radio">
+                <input type="hidden" name="promocion" value="BLACKMONDAY">
+
+                <div class="kilometro">
+                    <label for="nombre">Nombre:</label>
+                    <br>
+                    <input id="nombre" name="nombre" autofocus required minlength="3" maxlength="20" placeholder="Nombre">
+                </div>
+
+                <div class="kilometro">
+                    <label for="precio">Precio:</label>
+                    <br>
+                    <input type="number" id="precio" name="precio" required min="0" step=".5">
+                </div>
+
+                <div class="kilometro">
+                    <label for="stock">Stock:</label>
+                    <br>
+                    <input type="number" id="stock" name="stock" max="100" step="1">
+                </div>
+
+                <div class="kilometro">
+                    <label for="marca">Marca:</label>
+                    <br>
+                    <select id="marca" name="marca">
+                        <option value="">Seleccioná una marca</option>
+                        <option value="4">DJI</option>
+                        <option value="37">LG</option>
+                        <option value="14">Lenovo</option>
+                        <option value="2">Samsung</option>
+                        <option value="20">Sony</option>
+                        <option value="75">Apple</option>
+                    </select>
+                </div>
+                
+                <div class="kilometro">
+                    <label for="categoria">Categoría:</label>
+                    <br>
+                    <select id="categoria" name="categoria" size="8" multiple>
+                            <option value="70">TV</option>
+                            <option value="20">Consola</option>
+                            <option value="4">Celulares</option>
+                            <option value="19">Notebook</option>
+                            <option value="45">Lavarropas</option>
+                            <option value="17">Modem</option>
+                            <option value="2">Drones</option>
+                            <option value="14">Chromecast</option>
+                            <option value="3">Auriculares</option>
+                            <option value="5">Parlante</option>
+                    </select>
+                </div>
+
+                <div class="kilometro">
+
+                    <fieldset>
+                        <legend>Garantía:</legend>
+                        
+                        <input type="radio" id="garantia1" name="garantia" value="6">
+                        <label for="garantia1">6 meses</label>
+                        
+                        <input type="radio" id="garantia2" name="garantia" value="12">
+                        <label for="garantia2">12 meses</label>
+                        
+                        <input type="radio" id="garantia3" name="garantia" value="24">
+                        <label for="garantia3">24 meses</label>
+                        
+                        <input type="radio" id="garantia4" name="garantia" value="36">
+                        <label for="garantia4">36 meses</label>
+
+                    </fieldset>
+
+                </div>
+                
+                <div class="kilometro">
+                    <label for="foto">Foto:</label><br>
+                    <input type="file" id="foto" name="foto">
+                </div>
+
+                <div class="kilometro">
+                    <label for="detalles">Detalles:</label>
+                    <br>
+                    <textarea id="detalles" name="detalles" class="f"></textarea>
+                </div>
+                
+                <div class="kilometro">
+                    <input type="checkbox" id="envio" name="envio" value="si">
+                    <label for="envio">Envío sin cargo</label>
+                </div>
+
+                <div class="kilometro" >
+                    <input type="submit" value="Dar de alta">
+                    <input type="reset" value="Restablecer el formulario">
+                </div>
+            </div>    
+        </form >
+    </main>
+    <footer>
+        <div class="footer-content">
+            <h3>Connecticus Corporation</h3>
+            <p>Entrelazando caminos</p>
+            <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy;2021 Conneticus. desiñada por <span>Ojeda Nahuel</span></p>
+        </div>
+    </footer>
+</body>
+</html>
